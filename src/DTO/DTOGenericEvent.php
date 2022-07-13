@@ -4,10 +4,6 @@ namespace Braiunito\DtoGenericEvent\DTO;
 
 use DateTimeInterface;
 use Braiunito\DtoGenericEvent\DTO\DTOCustomData as CustomData;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
 class DTOGenericEvent
 {   
