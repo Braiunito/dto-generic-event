@@ -2,7 +2,7 @@
     "name": "braiunito/dto-generic-event",
     "description": "A composer package that includes entities & tools to manage, unify and orginize the API-Comunication between marketplaces.",
     "type": "library",
-    "license": "propietary",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Braiunito\\DtoGenericEvent\\": "src/"
