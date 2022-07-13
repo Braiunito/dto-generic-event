@@ -178,20 +178,6 @@ class DTOGenericEvent
     /** @var array|null */
     protected $eventHash = null;
 
-    public function parseToCustomData(array $customData): CustomData
-    {
-        $encoders = [new XmlEncoder(), new JsonEncoder()];
-        $normalizers = [new ObjectNormalizer()];
-        $serializer = new Serializer($normalizers, $encoders);
-        $customData = $serializer->serialize($customData, 'json');
-        $customData = $serializer->deserialize($customData, CustomData::class, 'json');
-        
-        $dataAmount = $this->parseToFloat($customData->getDataAmount());
-        $customData->setDataAmount($dataAmount);
-
-        return $customData;
-    }
-
     public function parseToFloat(?string $number): ?float
     {
         if ($number) {
