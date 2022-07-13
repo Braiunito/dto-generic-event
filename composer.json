@@ -17,7 +17,6 @@
     "minimum-stability": "stable",
     "require": {
         "php": "^7.4",
-        "symfony/serializer": "5.1.*",
         "symfony/config": "^5.1",
         "phpunit/phpunit": "^9.2",
         "ext-json": "*"
