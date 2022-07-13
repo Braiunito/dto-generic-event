@@ -1,0 +1,7 @@
+name: dto
+recipe: lamp
+config:
+  webroot: ./public
+services:
+  appserver:
+    type: php:7.4

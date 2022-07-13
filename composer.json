@@ -1,0 +1,25 @@
+{
+    "name": "braiunito/dto-generic-event",
+    "description": "A composer package that includes entities & tools to manage, unify and orginize the API-Comunication between marketplaces.",
+    "type": "library",
+    "license": "propietary",
+    "autoload": {
+        "psr-4": {
+            "Braiunito\\DtoGenericEvent\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Braiunito",
+            "email": "braian.maciel@dracoder.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.4",
+        "symfony/serializer": "5.1.*",
+        "symfony/config": "^5.1",
+        "phpunit/phpunit": "^9.2",
+        "ext-json": "*"
+    }
+}
