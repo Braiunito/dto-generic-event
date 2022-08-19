@@ -2,6 +2,8 @@
 
 namespace Braiunito\DtoGenericEvent\DTO;
 
+use JMS\Serializer\Annotation\Type;
+
 final class DTOInvoice
 {   
     /** @var string */
@@ -27,6 +29,27 @@ final class DTOInvoice
 
     /** @var string */
     public ?string $status = null;
+
+    /** @var string */
+    public ?string $chargeDate = null;
+    
+    /** @var string */
+    public ?string $charChain = null;
+    
+    /** @var string */
+    public ?bool $largeData = null;
+
+    /**
+     * @var array 
+     * @Type("array")
+     */
+    public ?array $setOfCharChain = null;
+
+    /**
+     * @var array 
+     * @Type("array")
+     */
+    public ?array $internalInvoiceDate = [];
 
     public function getProviderNif()
     {
@@ -120,6 +143,66 @@ final class DTOInvoice
     public function setStatus(?string $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+    
+    public function getInternalInvoiceDate(): ?array
+    {
+        return $this->internalInvoiceDate;
+    }
+    
+    public function setInternalInvoiceDate(?array $internalInvoiceDate): self
+    {
+        $this->internalInvoiceDate = $internalInvoiceDate;
+
+        return $this;
+    }
+    
+    public function getCharChain(): ?string
+    {
+        return $this->charChain;
+    }
+    
+    public function setCharChain(?string $charChain): self
+    {
+        $this->charChain = $charChain;
+
+        return $this;
+    }
+    
+    public function getChargeDate(): ?string
+    {
+        return $this->chargeDate;
+    }
+    
+    public function setChargeDate(?string $chargeDate): self
+    {
+        $this->chargeDate = $chargeDate;
+
+        return $this;
+    }
+    
+    public function getLargeData(): ?bool
+    {
+        return $this->largeData;
+    }
+    
+    public function setLargeData(?bool $largeData): self
+    {
+        $this->largeData = $largeData;
+
+        return $this;
+    }
+    
+    public function getSetOfCharChain(): ?array
+    {
+        return $this->setOfCharChain;
+    }
+    
+    public function setSetOfCharChain(?array $setOfCharChain): self
+    {
+        $this->setOfCharChain = $setOfCharChain;
 
         return $this;
     }
