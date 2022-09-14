@@ -29,9 +29,6 @@ final class DTOInvoice
 
     /** @var string */
     public ?string $status = null;
-
-    /** @var string */
-    public ?string $chargeDate = null;
     
     /** @var string */
     public ?string $charChain = null;
@@ -50,6 +47,18 @@ final class DTOInvoice
      * @Type("array")
      */
     public ?array $internalInvoiceDate = [];
+
+    /**
+     * @var array 
+     * @Type("array")
+     */
+    public ?array $uploadedDate = [];
+
+    /**
+     * @var array 
+     * @Type("array")
+     */
+    public ?array $eventIds = [];
 
     public function getProviderNif()
     {
@@ -171,14 +180,14 @@ final class DTOInvoice
         return $this;
     }
     
-    public function getChargeDate(): ?string
+    public function getUploadedDate(): ?array
     {
-        return $this->chargeDate;
+        return $this->uploadedDate;
     }
     
-    public function setChargeDate(?string $chargeDate): self
+    public function setUploadedDate(?array $uploadedDate): self
     {
-        $this->chargeDate = $chargeDate;
+        $this->uploadedDate = $uploadedDate;
 
         return $this;
     }
@@ -203,6 +212,18 @@ final class DTOInvoice
     public function setSetOfCharChain(?array $setOfCharChain): self
     {
         $this->setOfCharChain = $setOfCharChain;
+
+        return $this;
+    }
+    
+    public function getEventIds(): ?array
+    {
+        return $this->eventIds;
+    }
+    
+    public function setEventIds(?array $eventIds): self
+    {
+        $this->eventIds = $eventIds;
 
         return $this;
     }

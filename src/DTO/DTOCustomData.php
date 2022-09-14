@@ -4,29 +4,32 @@ namespace Braiunito\DtoGenericEvent\DTO;
 
 final class DTOCustomData
 {   
-    /** @var integer */
-    protected $position;
+    /** @var integer|null */
+    protected ?int $position = null;
 
-    /** @var string */
-    protected $description;
+    /** @var string|null */
+    protected ?string $description = null;
     
-    /** @var string */
-    protected $dataString;
+    /** @var string|null */
+    protected ?string $dataString = null;
     
-    /** @var string */
-    protected $dataAmount;
+    /** @var string|null */
+    protected ?string $dataAmount = null;
     
-    /** @var string */
-    protected $dataDate;
+    /** @var string|null */
+    protected ?string $dataDate = null;
     
-    /** @var string */
-    protected $dataTimestamp;
+    /** @var string|null */
+    protected ?string $dataTimestamp = null;
     
-    /** @var string */
-    protected $dataNumeric;
+    /** @var string|null */
+    protected ?string $dataNumeric = null;
     
-    /** @var string */
-    protected $operation;
+    /** @var string|null */
+    protected ?string $operation = null;
+
+    /** @var string|null */
+    protected ?string $eventId = null;
 
     public function __construct(
         $position = null,
@@ -141,6 +144,18 @@ final class DTOCustomData
     public function setPosition($position)
     {
         $this->position = $position;
+
+        return $this;
+    }
+    
+    public function getEventId()
+    {
+        return $this->eventId;
+    }
+    
+    public function setEventId($eventId)
+    {
+        $this->eventId = $eventId;
 
         return $this;
     }
